@@ -7,7 +7,7 @@
     "type": "git",
     "url": "dgellow/react-slidable"
   },
-  "homepage": "http://dgellow.github.io/react-slidable/",
+  "homepage": "http://dgellow.github.io/react-slidable/examples/",
   "scripts": {
     "build": "jsx --extension jsx src/ lib/",
     "watch": "jsx --watch --extension jsx src/ lib/",
