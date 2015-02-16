@@ -1,7 +1,8 @@
 {
   "name": "react-slidable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple React component for 'slidable' content (aka carousel).",
+  "main": "lib/slidable.js",
   "repository": {
     "type": "git",
     "url": "dgellow/react-slidable"
