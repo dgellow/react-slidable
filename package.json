@@ -15,7 +15,19 @@
     "examples:build": "browserify -e examples/js/index.jsx -t reactify -o examples/bundle-examples.js",
     "examples:watch": "watchify -v -e examples/js/index.jsx -t reactify -o examples/bundle-examples.js",
     "examples:browser": "browser-sync start --files \"examples/index.html, examples/style.css, examples/bundle-examples.js\" --server --startPath \"/examples/\"",
-    "prepublish": "cp src/slidable.css lib/  && npm run build"
+    "prepublish": "cp src/slidable.css lib/  && npm run build",
+    "test": "jest"
+  },
+  "jest": {
+    "testFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testDirectoryName": "tests",
+    "scriptPreprocessor": "<rootDir>/bin/jsx-preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
   },
   "author": "Samuel El-Borai <samuel.elborai@gmail.com>",
   "license": "MIT",
@@ -25,6 +37,7 @@
   "devDependencies": {
     "browser-sync": "^2.0.1",
     "browserify": "^8.1.3",
+    "jest-cli": "^0.2.2",
     "react-tools": "^0.12.2",
     "reactify": "^1.0.0",
     "watchify": "^2.3.0"
